@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yashar Heidari — QA / Test Engineer</title>
+<meta name="description" content="Test automation, data quality, and regression coverage. Portfolio of Yashar Heidari, QA / Test Engineer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F8F6;--surface:#FFFFFF;--ink:#0F1C13;--muted:#56705B;
+    --primary:#16A34A;--accent:#DC2626;--bg2:#EBF3EC;--border:#D6E3D8;
+    --font:'Inter', system-ui, sans-serif;--title:'Inter', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+  /* Nav */
+  nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(255,255,255,0.75);border-bottom:1px solid var(--border)}
+  nav.top .inner{max-width:1040px;margin:0 auto;padding:14px 1.25rem;display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-size:13.5px}
+  nav.top .brand{font-weight:700;font-family:var(--title);margin-right:auto;letter-spacing:-0.01em}
+  nav.top a{color:var(--ink);opacity:0.85}
+  nav.top a:hover{opacity:1;color:var(--primary);text-decoration:none}
+  nav.top .cta{background:var(--primary);color:#fff;padding:7px 14px;border-radius:999px;font-weight:600;opacity:1}
+  nav.top .cta:hover{opacity:0.9;color:#fff;text-decoration:none}
+  /* Hero */
+  .hero{position:relative;border:1px solid var(--border);border-radius:18px;padding:2.25rem 1.75rem;margin-bottom:2rem;background:linear-gradient(135deg,#E7F4E9 0%,#F6E4E4 100%);overflow:hidden}
+  .hero h1{font-family:var(--title);font-size:clamp(30px,4.4vw,46px);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:10px}
+  .hero .role{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--bg2);color:var(--primary);margin-bottom:14px;border:1px solid var(--border)}
+  .hero .tagline{font-size:17px;color:var(--muted);max-width:620px;margin-bottom:22px}
+  .hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid transparent;transition:transform .12s ease}
+  .btn:hover{transform:translateY(-1px);text-decoration:none}
+  .btn.primary{background:var(--primary);color:#fff}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--border)}
+  .hero-svg{position:absolute;right:-10px;bottom:-10px;width:46%;max-width:480px;opacity:0.9;pointer-events:none}
+  /* Metric cards */
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:2.5rem}
+  .metric{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 16px}
+  .metric .n{font-family:var(--title);font-size:32px;font-weight:700;color:var(--primary);letter-spacing:-0.02em}
+  .metric .l{font-size:12.5px;color:var(--muted);margin-top:4px}
+  /* Section */
+  section{margin-bottom:2.5rem}
+  section h2{font-family:var(--title);font-size:22px;font-weight:700;margin-bottom:14px;letter-spacing:-0.01em;display:flex;align-items:center;gap:10px}
+  section h2::before{content:'';width:26px;height:2px;background:var(--primary);border-radius:2px}
+  section p.lead{font-size:15.5px;color:var(--muted);max-width:780px}
+  /* Tech stack */
+  .stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .stack .g{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px}
+  .stack .g .lbl{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+  .stack .g .list{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:12.5px;padding:4px 10px;border-radius:999px;border:1px solid #D6E3D8;background:#EBF3EC;color:#16A34A;border-color:#D6E3D8}
+  /* Experience */
+  .role-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:14px}
+  .role-card .head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:4px}
+  .role-card .rtitle{font-weight:700;font-size:15.5px}
+  .role-card .dates{font-size:12.5px;color:var(--muted)}
+  .role-card .company{font-size:13.5px;color:var(--muted);margin-bottom:10px}
+  .role-card ul{padding-left:18px;margin:0}
+  .role-card li{margin:6px 0;font-size:14px}
+  .role-card li::marker{color:var(--primary)}
+  /* Projects */
+  .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+  .pcard{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;position:relative;overflow:hidden}
+  .pcard::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:var(--primary)}
+  .pcard h3{font-family:var(--title);font-size:16px;font-weight:700;margin-bottom:4px}
+  .pcard .stack-line{font-size:12px;color:var(--accent);font-weight:600;margin-bottom:8px}
+  .pcard p{font-size:13.5px;color:var(--muted)}
+  /* Certs */
+  .certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+  .ccard{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;font-size:13.5px}
+  .ccard::before{content:'✓';color:var(--primary);font-weight:700;margin-right:8px}
+  /* Contact */
+  .contact{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px}
+  .contact .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;font-size:13.5px}
+  .contact .grid div b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:2px}
+  footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  /* Theme-specific hero tweak for dark themes */
+  
+  
+  @media (max-width:600px){.hero{padding:1.75rem 1.25rem}.hero-svg{display:none}.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="inner">
+  <span class="brand">Yashar Heidari</span>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#stack">Tech Stack</a>
+  <a href="#certs">Certifications</a>
+  <a href="#contact">Contact</a>
+  <a class="cta" href="../cv/14_Yashar_Heidari_QA_Test_Engineer_CV.docx" target="_blank" rel="noopener">Download CV</a>
+</div></nav>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="role">QA / Test Engineer</span>
+    <h1>Yashar. Hired for outcomes, not job descriptions.</h1>
+    <p class="tagline">Test automation, data quality, and regression coverage. Based in Messina, Italy — open to remote. 5 years across B2B SaaS (Jumbula, US) and consumer app marketplaces (Cafe Bazaar, 40M+ users).</p>
+    <div class="ctas">
+      <a class="btn primary" href="../cv/14_Yashar_Heidari_QA_Test_Engineer_CV.docx" target="_blank" rel="noopener">Download CV (.docx)</a>
+      <a class="btn ghost" href="#projects">See key projects</a>
+      <a class="btn ghost" href="https://github.com/yheidari" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <svg viewBox="0 0 400 100" class="hero-svg" aria-hidden="true"><g><circle cx="40" cy="50" r="8" fill="#16A34A"/><circle cx="80" cy="50" r="8" fill="#16A34A"/><circle cx="120" cy="50" r="8" fill="#16A34A"/><circle cx="160" cy="50" r="8" fill="#DC2626"/><circle cx="200" cy="50" r="8" fill="#16A34A"/><circle cx="240" cy="50" r="8" fill="#16A34A"/><circle cx="280" cy="50" r="8" fill="#16A34A"/><circle cx="320" cy="50" r="8" fill="#16A34A"/><circle cx="360" cy="50" r="8" fill="#16A34A"/></g></svg>
+  </section>
+
+  <div class="metrics">
+    <div class="metric"><div class="n">240</div><div class="l">Unit/integration tests</div></div><div class="metric"><div class="n">78%</div><div class="l">Coverage (from 31%)</div></div><div class="metric"><div class="n">4%</div><div class="l">Broken-build rate (from 18%)</div></div><div class="metric"><div class="n">5%</div><div class="l">Post-merge bug rate (from 14%)</div></div>
+  </div>
+
+  <section id="profile">
+    <h2>Profile</h2>
+    <p class="lead">QA / Test Engineer with 5 years of experience ensuring data and product quality in SaaS and consumer app marketplace environments. Implemented a 40-rule data-validation framework at Cafe Bazaar (40M+ users) that cut reporting errors 35%, and wrote 240 unit/integration tests raising repo coverage from 31% to 78%. Strong in pytest, API testing, test-case design, and defect triage.</p>
+  </section>
+
+  <section id="stack">
+    <h2>Tech Stack</h2>
+    <div class="stack">
+      <div class="g"><div class="lbl">Test Automation</div><div class="list"><span class="chip">pytest</span><span class="chip">Jest</span><span class="chip">Playwright (basics)</span><span class="chip">Selenium (basics)</span><span class="chip">Postman</span><span class="chip">Newman</span></div></div><div class="g"><div class="lbl">Data Quality</div><div class="list"><span class="chip">Great Expectations basics</span><span class="chip">SQL-based validation</span><span class="chip">custom Python checks</span></div></div><div class="g"><div class="lbl">Languages</div><div class="list"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">Bash</span></div></div><div class="g"><div class="lbl">CI & Tracking</div><div class="list"><span class="chip">GitHub Actions</span><span class="chip">Jira</span><span class="chip">TestRail (basics)</span><span class="chip">Confluence</span><span class="chip">Git</span></div></div><div class="g"><div class="lbl">Methods</div><div class="list"><span class="chip">Test-case design</span><span class="chip">risk-based testing</span><span class="chip">exploratory testing</span><span class="chip">regression suites</span><span class="chip">defect triage</span></div></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    
+      <article class="role-card">
+        <div class="head">
+          <span class="rtitle">QA / Data Quality Engineer</span>
+          <span class="dates">2023 – 2025</span>
+        </div>
+        <div class="company">Cafe Bazaar — Iran's largest Android app marketplace (40M+ users)</div>
+        <ul><li>Implemented a 40-rule data-validation framework in Python + SQL, cutting reporting errors by 35% and catching 8 upstream regressions.</li><li>Wrote 240 pytest unit/integration tests against 12 internal tools and pipelines — repo coverage rose from 31% to 78%.</li><li>Designed and maintained a regression suite covering 60 critical analytics workflows — regression incidents fell from 4/month to <1.</li><li>Ran API test automation in Postman + Newman against 12 FastAPI endpoints in CI; broken-build rate dropped from 18% to 4%.</li><li>Reviewed 120+ PRs for data and internal-tools repos; post-merge bug rate fell from 14% to 5%.</li><li>Documented 80 test cases and 20 runbooks in Confluence, cutting onboarding time for new QAs from 3 weeks to 5 days.</li></ul>
+      </article>
+    
+      <article class="role-card">
+        <div class="head">
+          <span class="rtitle">QA Analyst — Marketing & Data Systems</span>
+          <span class="dates">2020 – 2023</span>
+        </div>
+        <div class="company">Jumbula — B2B SaaS for schools (US)</div>
+        <ul><li>Tested 60+ email campaigns and 12 lifecycle automations across devices and clients; deliverability issues dropped 46%.</li><li>Built a 30-case regression suite for the HubSpot → CRM sync; post-deploy defect rate fell from 22% to 6%.</li><li>Wrote exploratory and scripted tests for 5 landing-page rebuilds, catching 34 defects pre-launch.</li><li>Maintained 60+ SQL artifacts in Git with review; broken-report incidents dropped from 2/week to ~1/month.</li><li>Triaged 1,400 support tickets/quarter, converting 180 into confirmed defects tracked to resolution.</li></ul>
+      </article>
+    
+  </section>
+
+  <section id="projects">
+    <h2>Key Projects</h2>
+    <div class="projects">
+      <article class="pcard"><h3>Data Validation Framework</h3><div class="stack-line">Python, SQL, Great Expectations</div><p>Implemented a 40-rule validation framework across 12 pipelines; cut reporting errors 35% and prevented silent failures for 6 months.</p></article><article class="pcard"><h3>API Test Suite</h3><div class="stack-line">Postman, Newman, GitHub Actions</div><p>Automated 120 API checks against 12 endpoints; broken-build rate dropped from 18% to 4%.</p></article>
+    </div>
+  </section>
+
+  <section id="certs">
+    <h2>Certifications</h2>
+    <div class="certs"><div class="ccard">ISTQB Foundation Level (CTFL) — In Progress</div><div class="ccard">Postman API Testing Fundamentals — Postman Academy, 2024</div><div class="ccard">freeCodeCamp JavaScript Algorithms and Data Structures — 2024</div></div>
+  </section>
+
+  <section id="education">
+    <h2>Education &amp; Languages</h2>
+    <div class="contact"><div class="grid">
+      <div><b>Degree</b>BSc Computer Science (Data Analysis) · University of Messina, Italy · Expected 2027 (In Progress)</div>
+      <div><b>Languages</b>English — Professional working proficiency (C1) · Turkish — Native · Azerbaijani — Native</div>
+    </div></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact"><div class="grid">
+      <div><b>Location</b>Messina, Italy · Open to Remote</div>
+      <div><b>Email</b><a href="mailto:yashaarheidari@gmail.com">yashaarheidari@gmail.com</a></div>
+      <div><b>Phone</b>+39 351 492 0315</div>
+      <div><b>LinkedIn</b><a href="https://linkedin.com/in/yheidari" target="_blank" rel="noopener">linkedin.com/in/yheidari</a></div>
+      <div><b>GitHub</b><a href="https://github.com/yheidari" target="_blank" rel="noopener">github.com/yheidari</a></div>
+    </div></div>
+  </section>
+
+  <footer>
+    <span>© Yashar Heidari — Portfolio for QA / Test Engineer</span>
+    <span><a href="../">← All portfolios</a></span>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yashar Heidari — Data Analyst</title>
+<meta name="description" content="SQL-driven KPI reporting and executive-ready insights. Portfolio of Yashar Heidari, Data Analyst.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F1115;--surface:#151821;--ink:#EEF1F7;--muted:#9AA3B2;
+    --primary:#3DD8AE;--accent:#5EC6FF;--bg2:#1B1F2A;--border:#242939;
+    --font:'Inter', system-ui, sans-serif;--title:'Inter', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+  /* Nav */
+  nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(10,10,18,0.7);border-bottom:1px solid var(--border)}
+  nav.top .inner{max-width:1040px;margin:0 auto;padding:14px 1.25rem;display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-size:13.5px}
+  nav.top .brand{font-weight:700;font-family:var(--title);margin-right:auto;letter-spacing:-0.01em}
+  nav.top a{color:var(--ink);opacity:0.85}
+  nav.top a:hover{opacity:1;color:var(--primary);text-decoration:none}
+  nav.top .cta{background:var(--primary);color:#fff;padding:7px 14px;border-radius:999px;font-weight:600;opacity:1}
+  nav.top .cta:hover{opacity:0.9;color:#fff;text-decoration:none}
+  /* Hero */
+  .hero{position:relative;border:1px solid var(--border);border-radius:18px;padding:2.25rem 1.75rem;margin-bottom:2rem;background:linear-gradient(135deg,#16202E 0%,#1E2E3F 100%);overflow:hidden}
+  .hero h1{font-family:var(--title);font-size:clamp(30px,4.4vw,46px);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:10px}
+  .hero .role{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--bg2);color:var(--primary);margin-bottom:14px;border:1px solid var(--border)}
+  .hero .tagline{font-size:17px;color:var(--muted);max-width:620px;margin-bottom:22px}
+  .hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid transparent;transition:transform .12s ease}
+  .btn:hover{transform:translateY(-1px);text-decoration:none}
+  .btn.primary{background:var(--primary);color:#fff}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--border)}
+  .hero-svg{position:absolute;right:-10px;bottom:-10px;width:46%;max-width:480px;opacity:0.9;pointer-events:none}
+  /* Metric cards */
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:2.5rem}
+  .metric{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 16px}
+  .metric .n{font-family:var(--title);font-size:32px;font-weight:700;color:var(--primary);letter-spacing:-0.02em}
+  .metric .l{font-size:12.5px;color:var(--muted);margin-top:4px}
+  /* Section */
+  section{margin-bottom:2.5rem}
+  section h2{font-family:var(--title);font-size:22px;font-weight:700;margin-bottom:14px;letter-spacing:-0.01em;display:flex;align-items:center;gap:10px}
+  section h2::before{content:'';width:26px;height:2px;background:var(--primary);border-radius:2px}
+  section p.lead{font-size:15.5px;color:var(--muted);max-width:780px}
+  /* Tech stack */
+  .stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .stack .g{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px}
+  .stack .g .lbl{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+  .stack .g .list{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:12.5px;padding:4px 10px;border-radius:999px;border:1px solid #242939;background:#1B1F2A;color:#EEF1F7;border-color:#242939}
+  /* Experience */
+  .role-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:14px}
+  .role-card .head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:4px}
+  .role-card .rtitle{font-weight:700;font-size:15.5px}
+  .role-card .dates{font-size:12.5px;color:var(--muted)}
+  .role-card .company{font-size:13.5px;color:var(--muted);margin-bottom:10px}
+  .role-card ul{padding-left:18px;margin:0}
+  .role-card li{margin:6px 0;font-size:14px}
+  .role-card li::marker{color:var(--primary)}
+  /* Projects */
+  .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+  .pcard{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;position:relative;overflow:hidden}
+  .pcard::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:var(--primary)}
+  .pcard h3{font-family:var(--title);font-size:16px;font-weight:700;margin-bottom:4px}
+  .pcard .stack-line{font-size:12px;color:var(--accent);font-weight:600;margin-bottom:8px}
+  .pcard p{font-size:13.5px;color:var(--muted)}
+  /* Certs */
+  .certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+  .ccard{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;font-size:13.5px}
+  .ccard::before{content:'✓';color:var(--primary);font-weight:700;margin-right:8px}
+  /* Contact */
+  .contact{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px}
+  .contact .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;font-size:13.5px}
+  .contact .grid div b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:2px}
+  footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  /* Theme-specific hero tweak for dark themes */
+  .hero h1{color:#fff}.hero .tagline{color:#9AA3B2}.hero .role{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.1);color:#fff}
+  
+  @media (max-width:600px){.hero{padding:1.75rem 1.25rem}.hero-svg{display:none}.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="inner">
+  <span class="brand">Yashar Heidari</span>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#stack">Tech Stack</a>
+  <a href="#certs">Certifications</a>
+  <a href="#contact">Contact</a>
+  <a class="cta" href="../cv/08_Yashar_Heidari_Data_Analyst_CV.docx" target="_blank" rel="noopener">Download CV</a>
+</div></nav>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="role">Data Analyst</span>
+    <h1>Yashar. Hired for outcomes, not job descriptions.</h1>
+    <p class="tagline">SQL-driven KPI reporting and executive-ready insights. Based in Messina, Italy — open to remote. 5 years across B2B SaaS (Jumbula, US) and consumer app marketplaces (Cafe Bazaar, 40M+ users).</p>
+    <div class="ctas">
+      <a class="btn primary" href="../cv/08_Yashar_Heidari_Data_Analyst_CV.docx" target="_blank" rel="noopener">Download CV (.docx)</a>
+      <a class="btn ghost" href="#projects">See key projects</a>
+      <a class="btn ghost" href="https://github.com/yheidari" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <svg viewBox="0 0 400 120" class="hero-svg" aria-hidden="true"><g fill="none" stroke="#3DD8AE" stroke-width="1.2"><rect x="20" y="20" width="110" height="40" rx="4"/><rect x="140" y="20" width="110" height="40" rx="4"/><rect x="260" y="20" width="120" height="40" rx="4"/><rect x="20" y="70" width="230" height="40" rx="4"/><rect x="260" y="70" width="120" height="40" rx="4"/></g><g fill="#5EC6FF" opacity="0.6"><rect x="30" y="80" width="20" height="20"/><rect x="60" y="75" width="20" height="25"/><rect x="90" y="85" width="20" height="15"/><rect x="120" y="82" width="20" height="18"/></g></svg>
+  </section>
+
+  <div class="metrics">
+    <div class="metric"><div class="n">12</div><div class="l">SQL pipelines across 4 sources</div></div><div class="metric"><div class="n">8</div><div class="l">Power BI dashboards (20+ KPIs)</div></div><div class="metric"><div class="n">60%</div><div class="l">Prep-time reduction</div></div><div class="metric"><div class="n">35%</div><div class="l">Reporting-error reduction</div></div>
+  </div>
+
+  <section id="profile">
+    <h2>Profile</h2>
+    <p class="lead">Data Analyst with 5 years of experience in SaaS and consumer app marketplace environments (Jumbula, Cafe Bazaar — 40M+ users). Specialist in SQL-driven KPI reporting, Power BI dashboarding, funnel + cohort analysis, and translating complex datasets into executive-ready insights. Built 12 Power BI dashboards replacing 5 weekly manual reports and cut reporting cycle from 3 days to 4 hours for a team of 20.</p>
+  </section>
+
+  <section id="stack">
+    <h2>Tech Stack</h2>
+    <div class="stack">
+      <div class="g"><div class="lbl">SQL & Databases</div><div class="list"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">BigQuery</span><span class="chip">Snowflake (basics)</span></div></div><div class="g"><div class="lbl">Python</div><div class="list"><span class="chip">pandas</span><span class="chip">numpy</span><span class="chip">matplotlib</span><span class="chip">seaborn</span><span class="chip">Jupyter</span></div></div><div class="g"><div class="lbl">BI & Visualization</div><div class="list"><span class="chip">Power BI (DAX)</span><span class="chip">Tableau</span><span class="chip">Looker Studio</span><span class="chip">Google Sheets</span></div></div><div class="g"><div class="lbl">Other Tools</div><div class="list"><span class="chip">Excel (Power Query</span><span class="chip">VLOOKUP</span><span class="chip">pivot tables)</span><span class="chip">Git</span><span class="chip">Jira</span><span class="chip">Confluence</span></div></div><div class="g"><div class="lbl">Analytics Techniques</div><div class="list"><span class="chip">Funnel analysis</span><span class="chip">cohort analysis</span><span class="chip">A/B testing</span><span class="chip">KPI modeling</span><span class="chip">trend analysis</span></div></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    
+      <article class="role-card">
+        <div class="head">
+          <span class="rtitle">Data Analyst — Growth & Operations</span>
+          <span class="dates">2023 – 2025</span>
+        </div>
+        <div class="company">Cafe Bazaar — Iran's largest Android app marketplace (40M+ users)</div>
+        <ul><li>Built 12 SQL pipelines extracting data from 4 sources (GA4, product DB, CRM, ticketing), reducing manual prep time by 60% on weekly reporting.</li><li>Designed 8 Power BI dashboards tracking 20+ KPIs for a team of 20, replacing 5 recurring manual reports.</li><li>Ran funnel and cohort analysis on 6 months of behavioral data, identifying 4 drop-off points worth an estimated $180K/year in recovered revenue.</li><li>Implemented a data-validation framework that cut reporting errors by 35% across 6 recurring dashboards.</li><li>Delivered bi-weekly executive briefings to C-level stakeholders, translating SQL findings into 1-page summaries that drove 3 roadmap decisions.</li><li>Supported 24 A/B tests with statistical readouts, improving test-to-decision time from 10 days to 4.</li></ul>
+      </article>
+    
+      <article class="role-card">
+        <div class="head">
+          <span class="rtitle">Marketing Data Analyst</span>
+          <span class="dates">2020 – 2023</span>
+        </div>
+        <div class="company">Jumbula — B2B SaaS for schools (US)</div>
+        <ul><li>Built a 40-row campaign ROI dashboard in Power BI that let the team reallocate 25% of spend to top-performing channels.</li><li>Standardized 12 marketing KPIs across 6 teams, cutting reporting inconsistencies from 34% to 6%.</li><li>Wrote 80+ SQL queries against a 25K-subscriber HubSpot/CRM dataset to support segmentation and lifecycle campaigns.</li><li>Created a weekly self-serve reporting layer in Looker Studio, reducing ad-hoc data requests by 45%.</li><li>Collaborated with RevOps to audit 2K open opportunities, flagging 22% as stale and tightening forecast accuracy to 9%.</li></ul>
+      </article>
+    
+  </section>
+
+  <section id="projects">
+    <h2>Key Projects</h2>
+    <div class="projects">
+      <article class="pcard"><h3>E-commerce Funnel Analysis</h3><div class="stack-line">PostgreSQL, pandas, matplotlib</div><p>Wrote 14 SQL queries and 3 pandas notebooks on a Kaggle e-commerce dataset; surfaced 3 insights on checkout drop-off. Repo on GitHub.</p></article><article class="pcard"><h3>Public COVID Dashboard</h3><div class="stack-line">Power BI, Tableau Public</div><p>Built a 5-page Tableau Public dashboard tracking 12 country-level metrics with drill-through and forecast bands.</p></article>
+    </div>
+  </section>
+
+  <section id="certs">
+    <h2>Certifications</h2>
+    <div class="certs"><div class="ccard">Google Data Analytics Certificate — Coursera, 2024</div><div class="ccard">Microsoft Power BI Data Analyst (PL-300) — In Progress</div><div class="ccard">StrataScratch SQL — 50+ problems completed, 2024</div></div>
+  </section>
+
+  <section id="education">
+    <h2>Education &amp; Languages</h2>
+    <div class="contact"><div class="grid">
+      <div><b>Degree</b>BSc Computer Science (Data Analysis) · University of Messina, Italy · Expected 2027 (In Progress)</div>
+      <div><b>Languages</b>English — Professional working proficiency (C1) · Turkish — Native · Azerbaijani — Native</div>
+    </div></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact"><div class="grid">
+      <div><b>Location</b>Messina, Italy · Open to Remote</div>
+      <div><b>Email</b><a href="mailto:yashaarheidari@gmail.com">yashaarheidari@gmail.com</a></div>
+      <div><b>Phone</b>+39 351 492 0315</div>
+      <div><b>LinkedIn</b><a href="https://linkedin.com/in/yheidari" target="_blank" rel="noopener">linkedin.com/in/yheidari</a></div>
+      <div><b>GitHub</b><a href="https://github.com/yheidari" target="_blank" rel="noopener">github.com/yheidari</a></div>
+    </div></div>
+  </section>
+
+  <footer>
+    <span>© Yashar Heidari — Portfolio for Data Analyst</span>
+    <span><a href="../">← All portfolios</a></span>
+  </footer>
+</main>
+</body>
+</html>

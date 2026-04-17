@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yashar Heidari — SEO & Content Marketing Specialist</title>
+<meta name="description" content="Topical authority, technical SEO, and AI-assisted editorial at scale. Portfolio of Yashar Heidari, SEO & Content Marketing Specialist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF7F0;--surface:#FFFFFF;--ink:#151613;--muted:#5A5D53;
+    --primary:#1D6A3C;--accent:#B6862A;--bg2:#EFE9D8;--border:#E0D9C3;
+    --font:'Merriweather', Georgia, serif;--title:'Playfair Display', Georgia, serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+  /* Nav */
+  nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(255,255,255,0.75);border-bottom:1px solid var(--border)}
+  nav.top .inner{max-width:1040px;margin:0 auto;padding:14px 1.25rem;display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-size:13.5px}
+  nav.top .brand{font-weight:700;font-family:var(--title);margin-right:auto;letter-spacing:-0.01em}
+  nav.top a{color:var(--ink);opacity:0.85}
+  nav.top a:hover{opacity:1;color:var(--primary);text-decoration:none}
+  nav.top .cta{background:var(--primary);color:#fff;padding:7px 14px;border-radius:999px;font-weight:600;opacity:1}
+  nav.top .cta:hover{opacity:0.9;color:#fff;text-decoration:none}
+  /* Hero */
+  .hero{position:relative;border:1px solid var(--border);border-radius:18px;padding:2.25rem 1.75rem;margin-bottom:2rem;background:linear-gradient(180deg,#F8F4E8 0%,#EFE9D8 100%);overflow:hidden}
+  .hero h1{font-family:var(--title);font-size:clamp(30px,4.4vw,46px);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:10px}
+  .hero .role{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--bg2);color:var(--primary);margin-bottom:14px;border:1px solid var(--border)}
+  .hero .tagline{font-size:17px;color:var(--muted);max-width:620px;margin-bottom:22px}
+  .hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid transparent;transition:transform .12s ease}
+  .btn:hover{transform:translateY(-1px);text-decoration:none}
+  .btn.primary{background:var(--primary);color:#fff}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--border)}
+  .hero-svg{position:absolute;right:-10px;bottom:-10px;width:46%;max-width:480px;opacity:0.9;pointer-events:none}
+  /* Metric cards */
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:2.5rem}
+  .metric{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 16px}
+  .metric .n{font-family:var(--title);font-size:32px;font-weight:700;color:var(--primary);letter-spacing:-0.02em}
+  .metric .l{font-size:12.5px;color:var(--muted);margin-top:4px}
+  /* Section */
+  section{margin-bottom:2.5rem}
+  section h2{font-family:var(--title);font-size:22px;font-weight:700;margin-bottom:14px;letter-spacing:-0.01em;display:flex;align-items:center;gap:10px}
+  section h2::before{content:'';width:26px;height:2px;background:var(--primary);border-radius:2px}
+  section p.lead{font-size:15.5px;color:var(--muted);max-width:780px}
+  /* Tech stack */
+  .stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .stack .g{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px}
+  .stack .g .lbl{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+  .stack .g .list{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:12.5px;padding:4px 10px;border-radius:999px;border:1px solid #E0D9C3;background:#EFE9D8;color:#1D6A3C;border-color:#E0D9C3}
+  /* Experience */
+  .role-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:14px}
+  .role-card .head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:4px}
+  .role-card .rtitle{font-weight:700;font-size:15.5px}
+  .role-card .dates{font-size:12.5px;color:var(--muted)}
+  .role-card .company{font-size:13.5px;color:var(--muted);margin-bottom:10px}
+  .role-card ul{padding-left:18px;margin:0}
+  .role-card li{margin:6px 0;font-size:14px}
+  .role-card li::marker{color:var(--primary)}
+  /* Projects */
+  .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+  .pcard{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;position:relative;overflow:hidden}
+  .pcard::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:var(--primary)}
+  .pcard h3{font-family:var(--title);font-size:16px;font-weight:700;margin-bottom:4px}
+  .pcard .stack-line{font-size:12px;color:var(--accent);font-weight:600;margin-bottom:8px}
+  .pcard p{font-size:13.5px;color:var(--muted)}
+  /* Certs */
+  .certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+  .ccard{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;font-size:13.5px}
+  .ccard::before{content:'✓';color:var(--primary);font-weight:700;margin-right:8px}
+  /* Contact */
+  .contact{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px}
+  .contact .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;font-size:13.5px}
+  .contact .grid div b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:2px}
+  footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  /* Theme-specific hero tweak for dark themes */
+  
+  
+  @media (max-width:600px){.hero{padding:1.75rem 1.25rem}.hero-svg{display:none}.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="inner">
+  <span class="brand">Yashar Heidari</span>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#stack">Tech Stack</a>
+  <a href="#certs">Certifications</a>
+  <a href="#contact">Contact</a>
+  <a class="cta" href="../cv/03_Yashar_Heidari_SEO_Content_Marketing_Specialist_CV.docx" target="_blank" rel="noopener">Download CV</a>
+</div></nav>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="role">SEO & Content Marketing Specialist</span>
+    <h1>Yashar. Hired for outcomes, not job descriptions.</h1>
+    <p class="tagline">Topical authority, technical SEO, and AI-assisted editorial at scale. Based in Messina, Italy — open to remote. 5 years across B2B SaaS (Jumbula, US) and consumer app marketplaces (Cafe Bazaar, 40M+ users).</p>
+    <div class="ctas">
+      <a class="btn primary" href="../cv/03_Yashar_Heidari_SEO_Content_Marketing_Specialist_CV.docx" target="_blank" rel="noopener">Download CV (.docx)</a>
+      <a class="btn ghost" href="#projects">See key projects</a>
+      <a class="btn ghost" href="https://github.com/yheidari" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <svg viewBox="0 0 400 120" class="hero-svg" aria-hidden="true"><g fill="#B6862A" opacity="0.25"><rect x="30" y="30" width="60" height="2"/><rect x="30" y="40" width="120" height="2"/><rect x="30" y="50" width="90" height="2"/><rect x="30" y="70" width="60" height="2"/><rect x="30" y="80" width="110" height="2"/></g><g fill="#1D6A3C" opacity="0.4"><rect x="200" y="30" width="160" height="50" rx="4"/></g></svg>
+  </section>
+
+  <div class="metrics">
+    <div class="metric"><div class="n">3.2x</div><div class="l">Organic sessions growth (Jumbula)</div></div><div class="metric"><div class="n">1.1M</div><div class="l">Incremental organic sessions in 12 months</div></div><div class="metric"><div class="n">89%</div><div class="l">Core Web Vitals pass rate (from 54%)</div></div><div class="metric"><div class="n">46%</div><div class="l">Non-branded clicks lift (Cafe Bazaar)</div></div>
+  </div>
+
+  <section id="profile">
+    <h2>Profile</h2>
+    <p class="lead">SEO & Content Marketing Specialist with 5 years of experience scaling organic traffic and content-driven conversion across B2B SaaS and consumer platforms. Grew organic sessions 3.2x at Jumbula through keyword clustering, on-page optimization, and a 140-article content pipeline. Skilled in Ahrefs, SEMrush, Google Search Console, technical SEO audits, and AI-assisted content workflows.</p>
+  </section>
+
+  <section id="stack">
+    <h2>Tech Stack</h2>
+    <div class="stack">
+      <div class="g"><div class="lbl">SEO Tools</div><div class="list"><span class="chip">Ahrefs</span><span class="chip">SEMrush</span><span class="chip">Google Search Console</span><span class="chip">Screaming Frog</span><span class="chip">Surfer SEO</span><span class="chip">Clearscope</span></div></div><div class="g"><div class="lbl">Content & CMS</div><div class="list"><span class="chip">WordPress</span><span class="chip">Webflow</span><span class="chip">Ghost</span><span class="chip">Contentful</span><span class="chip">Notion</span></div></div><div class="g"><div class="lbl">Analytics</div><div class="list"><span class="chip">GA4</span><span class="chip">Looker Studio</span><span class="chip">Hotjar</span><span class="chip">Microsoft Clarity</span></div></div><div class="g"><div class="lbl">Technical SEO</div><div class="list"><span class="chip">schema.org markup</span><span class="chip">Core Web Vitals</span><span class="chip">sitemaps</span><span class="chip">robots.txt</span><span class="chip">redirect audits</span></div></div><div class="g"><div class="lbl">AI & Productivity</div><div class="list"><span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">Jasper</span><span class="chip">SurferAI</span><span class="chip">Zapier</span></div></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    
+      <article class="role-card">
+        <div class="head">
+          <span class="rtitle">SEO & Content Strategist</span>
+          <span class="dates">2023 – 2025</span>
+        </div>
+        <div class="company">Cafe Bazaar — Iran's largest Android app marketplace (40M+ users)</div>
+        <ul><li>Led SEO strategy for 250+ app landing pages, lifting non-branded organic clicks by 46% and average position from 18 to 7 in 9 months.</li><li>Built a 30-cluster topical map covering 1,200 keywords, driving 1.1M incremental organic sessions over 12 months.</li><li>Ran 14 technical SEO audits in Screaming Frog, fixing 3,400 crawl issues and lifting Core Web Vitals pass rate from 54% to 89%.</li><li>Wrote and optimized 85 blog posts (1,500–2,500 words) with Surfer/Clearscope, achieving a 38% average conversion uplift on landing CTAs.</li><li>Partnered with product to launch 6 schema.org implementations (FAQ, Review, App), growing SERP feature appearances by 72%.</li><li>Leveraged Claude and ChatGPT to scale editorial research and outline generation, doubling monthly throughput from 8 to 16 articles with no drop in average SERP position.</li></ul>
+      </article>
+    
+      <article class="role-card">
+        <div class="head">
+          <span class="rtitle">Content Marketing Specialist</span>
+          <span class="dates">2020 – 2023</span>
+        </div>
+        <div class="company">Jumbula — B2B SaaS for schools (US)</div>
+        <ul><li>Grew organic traffic 3.2x (from 14K to 45K monthly sessions) through a 140-article SEO pipeline targeting 420 tracked keywords.</li><li>Built a backlink program that earned 90 referring domains at DR 40+, lifting domain rating from 21 to 38.</li><li>Launched 12 pillar pages that generated 28% of total inbound demo requests within 6 months.</li><li>Wrote 60+ conversion-focused landing variants tied to paid search, improving quality score from 5.8 to 8.4.</li><li>Set up GA4 + Search Console reporting that cut weekly SEO reporting time from 4 hours to 30 minutes.</li></ul>
+      </article>
+    
+  </section>
+
+  <section id="projects">
+    <h2>Key Projects</h2>
+    <div class="projects">
+      <article class="pcard"><h3>Topical Authority Map — SaaS Niche</h3><div class="stack-line">Ahrefs, GSC, Surfer SEO</div><p>Mapped 1,200 keywords into 30 clusters and modeled expected traffic uplift per cluster — delivered 1.1M incremental sessions.</p></article><article class="pcard"><h3>AI-Assisted Editorial Workflow</h3><div class="stack-line">Claude, SurferAI, WordPress</div><p>Shipped a 5-step outline → draft → optimize pipeline that 2x'd monthly throughput while holding average position in top 10.</p></article>
+    </div>
+  </section>
+
+  <section id="certs">
+    <h2>Certifications</h2>
+    <div class="certs"><div class="ccard">SEMrush SEO Toolkit Certification — SEMrush Academy, 2024</div><div class="ccard">HubSpot Content Marketing Certified — HubSpot Academy, 2024</div><div class="ccard">Google Analytics 4 Certification — Google Skillshop, 2024</div></div>
+  </section>
+
+  <section id="education">
+    <h2>Education &amp; Languages</h2>
+    <div class="contact"><div class="grid">
+      <div><b>Degree</b>BSc Computer Science (Data Analysis) · University of Messina, Italy · Expected 2027 (In Progress)</div>
+      <div><b>Languages</b>English — Professional working proficiency (C1) · Turkish — Native · Azerbaijani — Native</div>
+    </div></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact"><div class="grid">
+      <div><b>Location</b>Messina, Italy · Open to Remote</div>
+      <div><b>Email</b><a href="mailto:yashaarheidari@gmail.com">yashaarheidari@gmail.com</a></div>
+      <div><b>Phone</b>+39 351 492 0315</div>
+      <div><b>LinkedIn</b><a href="https://linkedin.com/in/yheidari" target="_blank" rel="noopener">linkedin.com/in/yheidari</a></div>
+      <div><b>GitHub</b><a href="https://github.com/yheidari" target="_blank" rel="noopener">github.com/yheidari</a></div>
+    </div></div>
+  </section>
+
+  <footer>
+    <span>© Yashar Heidari — Portfolio for SEO & Content Marketing Specialist</span>
+    <span><a href="../">← All portfolios</a></span>
+  </footer>
+</main>
+</body>
+</html>

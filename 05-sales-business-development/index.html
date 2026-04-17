@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yashar Heidari — Sales & Business Development Specialist</title>
+<meta name="description" content="Pipeline generation, outbound, and MEDDIC-led qualification. Portfolio of Yashar Heidari, Sales & Business Development Specialist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F3F6FC;--surface:#FFFFFF;--ink:#0A1A33;--muted:#4D5E7A;
+    --primary:#143478;--accent:#1F9A58;--bg2:#E9EFF9;--border:#D1DBEC;
+    --font:'Inter', system-ui, sans-serif;--title:'Inter', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+  /* Nav */
+  nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(255,255,255,0.75);border-bottom:1px solid var(--border)}
+  nav.top .inner{max-width:1040px;margin:0 auto;padding:14px 1.25rem;display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-size:13.5px}
+  nav.top .brand{font-weight:700;font-family:var(--title);margin-right:auto;letter-spacing:-0.01em}
+  nav.top a{color:var(--ink);opacity:0.85}
+  nav.top a:hover{opacity:1;color:var(--primary);text-decoration:none}
+  nav.top .cta{background:var(--primary);color:#fff;padding:7px 14px;border-radius:999px;font-weight:600;opacity:1}
+  nav.top .cta:hover{opacity:0.9;color:#fff;text-decoration:none}
+  /* Hero */
+  .hero{position:relative;border:1px solid var(--border);border-radius:18px;padding:2.25rem 1.75rem;margin-bottom:2rem;background:linear-gradient(135deg,#DDE6F7 0%,#CAD8ED 100%);overflow:hidden}
+  .hero h1{font-family:var(--title);font-size:clamp(30px,4.4vw,46px);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:10px}
+  .hero .role{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--bg2);color:var(--primary);margin-bottom:14px;border:1px solid var(--border)}
+  .hero .tagline{font-size:17px;color:var(--muted);max-width:620px;margin-bottom:22px}
+  .hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid transparent;transition:transform .12s ease}
+  .btn:hover{transform:translateY(-1px);text-decoration:none}
+  .btn.primary{background:var(--primary);color:#fff}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--border)}
+  .hero-svg{position:absolute;right:-10px;bottom:-10px;width:46%;max-width:480px;opacity:0.9;pointer-events:none}
+  /* Metric cards */
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:2.5rem}
+  .metric{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 16px}
+  .metric .n{font-family:var(--title);font-size:32px;font-weight:700;color:var(--primary);letter-spacing:-0.02em}
+  .metric .l{font-size:12.5px;color:var(--muted);margin-top:4px}
+  /* Section */
+  section{margin-bottom:2.5rem}
+  section h2{font-family:var(--title);font-size:22px;font-weight:700;margin-bottom:14px;letter-spacing:-0.01em;display:flex;align-items:center;gap:10px}
+  section h2::before{content:'';width:26px;height:2px;background:var(--primary);border-radius:2px}
+  section p.lead{font-size:15.5px;color:var(--muted);max-width:780px}
+  /* Tech stack */
+  .stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .stack .g{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px}
+  .stack .g .lbl{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+  .stack .g .list{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:12.5px;padding:4px 10px;border-radius:999px;border:1px solid #D1DBEC;background:#E9EFF9;color:#143478;border-color:#D1DBEC}
+  /* Experience */
+  .role-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:14px}
+  .role-card .head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:4px}
+  .role-card .rtitle{font-weight:700;font-size:15.5px}
+  .role-card .dates{font-size:12.5px;color:var(--muted)}
+  .role-card .company{font-size:13.5px;color:var(--muted);margin-bottom:10px}
+  .role-card ul{padding-left:18px;margin:0}
+  .role-card li{margin:6px 0;font-size:14px}
+  .role-card li::marker{color:var(--primary)}
+  /* Projects */
+  .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+  .pcard{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;position:relative;overflow:hidden}
+  .pcard::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:var(--primary)}
+  .pcard h3{font-family:var(--title);font-size:16px;font-weight:700;margin-bottom:4px}
+  .pcard .stack-line{font-size:12px;color:var(--accent);font-weight:600;margin-bottom:8px}
+  .pcard p{font-size:13.5px;color:var(--muted)}
+  /* Certs */
+  .certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+  .ccard{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;font-size:13.5px}
+  .ccard::before{content:'✓';color:var(--primary);font-weight:700;margin-right:8px}
+  /* Contact */
+  .contact{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px}
+  .contact .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;font-size:13.5px}
+  .contact .grid div b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);margin-bottom:2px}
+  footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  /* Theme-specific hero tweak for dark themes */
+  
+  
+  @media (max-width:600px){.hero{padding:1.75rem 1.25rem}.hero-svg{display:none}.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="inner">
+  <span class="brand">Yashar Heidari</span>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#stack">Tech Stack</a>
+  <a href="#certs">Certifications</a>
+  <a href="#contact">Contact</a>
+  <a class="cta" href="../cv/05_Yashar_Heidari_Sales_Business_Development_Specialist_CV.docx" target="_blank" rel="noopener">Download CV</a>
+</div></nav>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="role">Sales & Business Development Specialist</span>
+    <h1>Yashar. Hired for outcomes, not job descriptions.</h1>
+    <p class="tagline">Pipeline generation, outbound, and MEDDIC-led qualification. Based in Messina, Italy — open to remote. 5 years across B2B SaaS (Jumbula, US) and consumer app marketplaces (Cafe Bazaar, 40M+ users).</p>
+    <div class="ctas">
+      <a class="btn primary" href="../cv/05_Yashar_Heidari_Sales_Business_Development_Specialist_CV.docx" target="_blank" rel="noopener">Download CV (.docx)</a>
+      <a class="btn ghost" href="#projects">See key projects</a>
+      <a class="btn ghost" href="https://github.com/yheidari" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <svg viewBox="0 0 400 100" class="hero-svg" aria-hidden="true"><g fill="none" stroke="#143478" stroke-width="1.5"><rect x="20" y="40" width="60" height="30" rx="4"/><rect x="100" y="40" width="60" height="30" rx="4"/><rect x="180" y="40" width="60" height="30" rx="4"/><rect x="260" y="40" width="60" height="30" rx="4"/><rect x="340" y="40" width="40" height="30" rx="4"/><path d="M80 55 L100 55 M160 55 L180 55 M240 55 L260 55 M320 55 L340 55"/></g></svg>
+  </section>
+
+  <div class="metrics">
+    <div class="metric"><div class="n">180+</div><div class="l">Qualified demos / quarter</div></div><div class="metric"><div class="n">$1.2M</div><div class="l">Net-new ARR closed (attributed)</div></div><div class="metric"><div class="n">2.1x</div><div class="l">Quota attainment</div></div><div class="metric"><div class="n">9%</div><div class="l">Forecast variance (from 22%)</div></div>
+  </div>
+
+  <section id="profile">
+    <h2>Profile</h2>
+    <p class="lead">Sales & Business Development Specialist with 5 years of experience in B2B SaaS pipeline generation, outbound prospecting, and deal acceleration. Booked 180+ qualified demos per quarter at Jumbula through Apollo + HubSpot workflows, and helped close $1.2M in net-new ARR. Strong in MEDDIC/BANT qualification, CRM hygiene, multi-channel outbound, and partnering with RevOps on forecast accuracy.</p>
+  </section>
+
+  <section id="stack">
+    <h2>Tech Stack</h2>
+    <div class="stack">
+      <div class="g"><div class="lbl">CRM & Sales Tools</div><div class="list"><span class="chip">HubSpot</span><span class="chip">Salesforce</span><span class="chip">Apollo.io</span><span class="chip">Outreach</span><span class="chip">Salesloft</span><span class="chip">Gong</span><span class="chip">Clari</span></div></div><div class="g"><div class="lbl">Prospecting & Data</div><div class="list"><span class="chip">LinkedIn Sales Navigator</span><span class="chip">ZoomInfo</span><span class="chip">Clay</span><span class="chip">Lusha</span><span class="chip">Hunter.io</span></div></div><div class="g"><div class="lbl">Outreach & Enablement</div><div class="list"><span class="chip">HubSpot Sequences</span><span class="chip">Apollo sequences</span><span class="chip">Loom</span><span class="chip">Calendly</span><span class="chip">Chili Piper</span></div></div><div class="g"><div class="lbl">Analytics & Reporting</div><div class="list"><span class="chip">SQL (PostgreSQL)</span><span class="chip">Excel</span><span class="chip">Power BI</span><span class="chip">HubSpot Reports</span></div></div><div class="g"><div class="lbl">Methodologies</div><div class="list"><span class="chip">MEDDIC</span><span class="chip">BANT</span><span class="chip">Challenger Sale</span><span class="chip">SPIN</span><span class="chip">consultative selling</span></div></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    
+      <article class="role-card">
+        <div class="head">
+          <span class="rtitle">Business Development Specialist</span>
+          <span class="dates">2023 – 2025</span>
+        </div>
+        <div class="company">Cafe Bazaar — Iran's largest Android app marketplace (40M+ users)</div>
+        <ul><li>Built a 3-touch outbound sequence targeting app publishers that booked 90 qualified discovery calls per quarter at a 14% reply rate.</li><li>Partnered with marketing on 24 co-marketing deals with mid-tier publishers, driving $320K in incremental transaction volume.</li><li>Maintained a 600-account territory in CRM with <2% data-quality errors vs. a 10% baseline, through weekly enrichment in Apollo/Clay.</li><li>Ran discovery and qualification using MEDDIC, raising demo-to-SQL conversion from 29% to 44%.</li><li>Built a weekly pipeline dashboard tracking 8 stages and 14 metrics for a team of 12, cutting forecast variance from 22% to 9%.</li></ul>
+      </article>
+    
+      <article class="role-card">
+        <div class="head">
+          <span class="rtitle">SDR / Business Development Representative</span>
+          <span class="dates">2020 – 2023</span>
+        </div>
+        <div class="company">Jumbula — B2B SaaS for schools (US)</div>
+        <ul><li>Delivered 180+ qualified demos per quarter via HubSpot and Apollo cadences across email, call, and LinkedIn — 2.1x quota attainment.</li><li>Drove $1.2M in net-new ARR closed across 75 accounts during tenure in partnership with 4 AEs.</li><li>Ran 12 multi-channel outbound plays on SMB districts, generating a 6.8% meeting-booked rate (industry benchmark: 3–4%).</li><li>Qualified 2,400+ inbound leads using a BANT scorecard and routed to the right AE, cutting lead-to-demo time from 5 days to 28 hours.</li><li>Ran monthly deal reviews with AEs and RevOps, improving stage hygiene and reducing stalled-deal aging by 37%.</li></ul>
+      </article>
+    
+  </section>
+
+  <section id="projects">
+    <h2>Key Projects</h2>
+    <div class="projects">
+      <article class="pcard"><h3>Outbound Cadence Playbook</h3><div class="stack-line">HubSpot, Apollo, Gong</div><p>Wrote a 3-sequence playbook (SMB, mid-market, enterprise) adopted by 8 reps — lifted team reply rate from 4% to 9%.</p></article><article class="pcard"><h3>Pipeline Hygiene Audit</h3><div class="stack-line">Salesforce, SQL, Excel</div><p>Audited 2K open opps, flagged 22% as stale, automated cleanup triggers — tightened forecast accuracy to within 9%.</p></article>
+    </div>
+  </section>
+
+  <section id="certs">
+    <h2>Certifications</h2>
+    <div class="certs"><div class="ccard">HubSpot Sales Software Certified — HubSpot Academy, 2024</div><div class="ccard">Salesforce Certified Associate — Salesforce Trailhead, 2024</div><div class="ccard">MEDDIC Core Certification — MEDDIC Academy, 2024</div></div>
+  </section>
+
+  <section id="education">
+    <h2>Education &amp; Languages</h2>
+    <div class="contact"><div class="grid">
+      <div><b>Degree</b>BSc Computer Science (Data Analysis) · University of Messina, Italy · Expected 2027 (In Progress)</div>
+      <div><b>Languages</b>English — Professional working proficiency (C1) · Turkish — Native · Azerbaijani — Native</div>
+    </div></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact"><div class="grid">
+      <div><b>Location</b>Messina, Italy · Open to Remote</div>
+      <div><b>Email</b><a href="mailto:yashaarheidari@gmail.com">yashaarheidari@gmail.com</a></div>
+      <div><b>Phone</b>+39 351 492 0315</div>
+      <div><b>LinkedIn</b><a href="https://linkedin.com/in/yheidari" target="_blank" rel="noopener">linkedin.com/in/yheidari</a></div>
+      <div><b>GitHub</b><a href="https://github.com/yheidari" target="_blank" rel="noopener">github.com/yheidari</a></div>
+    </div></div>
+  </section>
+
+  <footer>
+    <span>© Yashar Heidari — Portfolio for Sales & Business Development Specialist</span>
+    <span><a href="../">← All portfolios</a></span>
+  </footer>
+</main>
+</body>
+</html>
